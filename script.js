@@ -1,31 +1,47 @@
-let amountElement = document.querySelector(".js-amount");
-let formElement = document.querySelector(".js-form");
-let resultElement = document.querySelector(".js-result");
-let currencyElement = document.querySelector(".js-currency");
+{
 
-let rateUSD = 4.20;
-let rateEUR = 4.54;
-let rateCHF = 4.67;
+    const calculateResult = (amount, currency) => {
+        const rateUSD = 4.20;
+        const rateEUR = 4.54;
+        const rateCHF = 4.67;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-    let currency = currencyElement.value;
-    let amount = +amountElement.value;
+        switch (currency) {
+            case "USD":
+                return amount * rateUSD;
+            case "EUR":
+                return amount * rateEUR;
+            case "CHF":
+                return amount * rateCHF;
+        }
 
-    let result = resultElement.value;
+    };
 
-    switch (currency) {
-        case "USD":
-            result = amount * rateUSD;
-            break;
-        case "EUR":
-            result = amount * rateEUR;
-            break;
-        case "CHF":
-            result = amount * rateCHF;
-            break;
+    const updateResultText = (amount, result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerText = `${result.toFixed(2)} PLN`;
     }
 
-    resultElement.innerText = `${result.toFixed(2)} PLN`;
-});
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+
+        const result = calculateResult(amount, currency);
+
+        updateResultText(amount, result, currency)
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
+
+    };
+
+    init();
+
+}
