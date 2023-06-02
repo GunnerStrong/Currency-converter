@@ -12,8 +12,14 @@ html {
     width: 100%;
     max-width: 650px;
     font-family: 'Lato', sans-serif;
-    background-color: rgb(245, 242, 237);
     margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    resize: both;
+    overflow: auto;
+    background-image: url("./background.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .header__tittle {
