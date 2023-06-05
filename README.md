@@ -1,7 +1,15 @@
-# Currency-converter - Kalkulator walut
-## Witam w moim prostym ale i skutecznym kalkulatorze walut.
-### Wakacje tuż tuż, a co za tym idzie czas urlopów do ciepłych krajów. To także konieczność wymiany naszej polskiej waluty na zagraniczną. Zawsze warto mieć przy sobie **troszkę** drobnych na napiwki i pamiątki dla rodziny. Aby lepiej się przygotować do tego wydarzenia przychodzę z pomocą. Na mojej stronie można bez problemu przeliczyć walutę EUR, USD oraz CHF. Serdeczenie zapraszam na moją stronę
-
+# Currency-converter 
+#### I invite you to use my currency converter. It is created for the course I am currently taking.
+## Link
 https://gunnerstrong.github.io/Currency-converter/
 
-#### Wszystkim życzę wspaniałych i niezapomnianych wakacji. A nade wszystko życzę bezpiecznego odpoczynku.
+![scrren](https://raw.githubusercontent.com/GunnerStrong/Currency-converter/4dab7a8147d969d9cd6a6923e2975277d038da94/images/screen.png)
+
+ It is very easy to use. It can convert EUR, USD and CHF amounts
+
+
+Just enter a specific amount and select the appropriate currency. Then click the "przelicz" button and the amount in PLN is displayed below.
+
+
+## Technology
+In this project I used the BEM convention, as well as Java Script and Flex. The currency calculator has not been added to the server. This is the next step in the course.
