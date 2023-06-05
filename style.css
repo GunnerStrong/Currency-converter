@@ -43,6 +43,7 @@ html {
 .form__labelText {
     color: rgb(40, 107, 152);
     width: 100%;
+    padding: 40px;
 }
 
 .form__button {
